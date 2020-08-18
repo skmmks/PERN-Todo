@@ -1,6 +1,16 @@
 import React, { Fragment, useEffect, useState } from 'react';
 
 const ListTodos = () => {
+  const getTodos = async () => {
+    try {
+    } catch (error) {
+      console.error(error.message);
+    }
+  };
+
+  useEffect(() => {
+    getTodos();
+  });
   return (
     <Fragment>
       <table className='table mt-5 text-center'>
