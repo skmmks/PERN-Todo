@@ -18,8 +18,10 @@ const ListTodos = () => {
     getTodos();
   }, []);
 
+  console.log(todos);
   return (
     <Fragment>
+      {' '}
       <table className='table mt-5 text-center'>
         <thead>
           <tr>
@@ -34,13 +36,13 @@ const ListTodos = () => {
             <td>Doe</td>
             <td>john@example.com</td>
           </tr>  */}
-          {todos.map((todo) => {
+          {todos.map((todo) => (
             <tr>
               <td>{todo.description}</td>
               <td>Edit</td>
               <td>Delete</td>
-            </tr>;
-          })}
+            </tr>
+          ))}
         </tbody>
       </table>
     </Fragment>
