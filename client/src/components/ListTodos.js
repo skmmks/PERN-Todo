@@ -37,10 +37,12 @@ const ListTodos = () => {
             <td>john@example.com</td>
           </tr>  */}
           {todos.map((todo) => (
-            <tr>
+            <tr key={todo.todo_id}>
               <td>{todo.description}</td>
               <td>Edit</td>
-              <td>Delete</td>
+              <td>
+                <button className='btn btn-danger'>Delete</button>
+              </td>
             </tr>
           ))}
         </tbody>
